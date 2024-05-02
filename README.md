@@ -29,11 +29,11 @@ That's it!
 
 RODAR
 -------------------------------------
-npm run build
-schematics .:angular-architecture
-npm link
+npm run build;
+schematics .:angular-architecture;
+npm link;
 
 INSTALAR
 --------------------------------------
-npm link path
-ng g angular-architecture:angular-architecture
+npm link path;
+ng g angular-architecture:angular-architecture;
