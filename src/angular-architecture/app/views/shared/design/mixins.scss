@@ -1,0 +1,127 @@
+@mixin flex($j-content, $a-items, $gap) {
+  display: flex;
+  justify-content: $j-content;
+  align-items: $a-items;
+  gap: $gap;
+}
+
+@mixin flex_height($height, $j-content, $a-items, $gap) {
+  @include flex($content, $items, $gap);
+  height: $height;
+}
+
+@mixin flex_a-items($a-items, $gap) {
+  display: flex;
+  align-items: $a-items;
+  gap: $gap;
+}
+
+@mixin flex_j-content($j-content, $gap) {
+  display: flex;
+  justify-content: $j-content;
+  gap: $gap;
+}
+
+@mixin flex_wrap($gap, $f-wrap) {
+  display: flex;
+  gap: $gap;
+  flex-wrap: $f-wrap;
+}
+
+@mixin flex_a-items_wrap($a-items, $gap, $f-wrap) {
+  @include flex_a-items($a-items, $gap);
+  flex-wrap: $f-wrap;
+}
+
+@mixin flex_j-content_wrap($j-content, $gap, $f-wrap) {
+  @include flex_j-content($j-content, $gap);
+  flex-wrap: $f-wrap;
+}
+
+@mixin flex-gap($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-height($height) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $height;
+}
+
+@mixin flex-between() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-between-pad($padding) {
+  display: flex;
+  justify-content: space-between;
+  padding: $padding;
+}
+
+@mixin flex-evenly() {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin flex-end-gap($gap) {
+  display: flex;
+  align-items: flex-end;
+  gap: $gap;
+}
+
+@mixin flex_d-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flex-login($padding, $width, $zindex) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: $width;
+  z-index: $zindex;
+  padding: $padding;
+}
+
+/* Box-shadow */
+@mixin box-shadow($hor, $ver, $blur, $spread, $cor) {
+  -webkit-box-shadow: $hor $ver $blur $spread $cor;
+  -moz-box-shadow: $hor $ver $blur $spread $cor;
+  box-shadow: $hor $ver $blur $spread $cor;
+}
+
+@mixin box-shadow_inset($hor, $ver, $blur, $spread, $cor) {
+  -webkit-box-shadow: inset $hor $ver $blur $spread $cor;
+  -moz-box-shadow: inset $hor $ver $blur $spread $cor;
+  box-shadow: inset $hor $ver $blur $spread $cor;
+}
+
+@mixin mobile-max-w($width) {
+  @media (max-width: $width) {
+    @content
+  }
+}

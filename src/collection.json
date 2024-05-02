@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "extends": ["@schematics/angular"],
+  "schematics": {
+    "angular-architecture": {
+      "description": "Estendendo o schematics do ng-new.",
+      "factory": "./angular-architecture/index#main"
+    }
+  }
+}
